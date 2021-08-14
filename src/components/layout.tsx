@@ -1,16 +1,22 @@
-import { Box, Flex, useColorMode, FlexProps, chakra } from '@chakra-ui/react'
-import { Header } from '@components/header'
-import { Footer } from './footer'
+import {
+  Box,
+  Flex,
+  useColorMode,
+  FlexProps,
+  chakra,
+} from "@chakra-ui/react";
+import { Header } from "@components/header";
+import { Footer } from "@components/footer";
 
 export const Layout = (props: FlexProps) => {
-  const { colorMode } = useColorMode()
+  const { colorMode } = useColorMode();
 
-  const bgColor = { light: 'gray.50', dark: 'gray.900' }
+  const bgColor = { light: "gray.50", dark: "gray.900" };
 
-  const color = { light: 'black', dark: 'white' }
+  const color = { light: "black", dark: "white" };
   return (
     <Box>
-      <Header/>
+      <Header />
       <Flex
         direction="column"
         alignItems="center"
@@ -19,7 +25,7 @@ export const Layout = (props: FlexProps) => {
         color={color[colorMode]}
         {...props}
       />
-      <Footer/>
+      <Footer />
     </Box>
-  )
-}
+  );
+};
